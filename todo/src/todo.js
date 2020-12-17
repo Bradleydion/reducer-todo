@@ -1,5 +1,5 @@
 import React, {useState, useReducer} from "react"
-import todoReducer from "./reducer/todoreducer"
+import todoReducer from "./toDoReducer"
 
 const ToDo = () => {
     const [newTask, setNewTask]=useState("")
@@ -21,13 +21,14 @@ const ToDo = () => {
         <h1>Todo List</h1>
         
             <h2>To Be Done</h2>
-            <h3>{state.item}</h3>
-            <input 
+    <h3>This is where the list of task will eventually go</h3>
+            <div><input 
                 value = {newTask}
                 onChange ={handleChanges}
                 type ="text"
                 name ="task"
                 />
+                <button type="add-Task">Add Task</button></div>
         </div>
         
 

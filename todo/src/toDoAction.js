@@ -6,7 +6,9 @@ export const COMPLETE_TASK="COMPLETE_TASK";
 export default {
    addTodo: (newTask) =>{
        return ({type:ADD_TODO, payload:newTask})
+   },
+   completeTask: (toggleComplete) => {
+       return ({type:COMPLETE_TASK})
    }
 
     }
-
