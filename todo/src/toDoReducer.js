@@ -24,12 +24,12 @@ export const toDoReducer = (todos, action) => {
         case(ACTIONS.COMPLETE_TASK):
         return todos.map(todo => {
             if (todo.id === action.payload.id){
-                return {...todo, complete:!todo.complete}
+                return {...todo, completed:!todo.completed}
             }
             return todo
         })
         case(ACTIONS.CLEAR_COMPLETED):
-        return todos.filter(todo => !todo.complete)
+        return todos.filter(todo => !todo.completed)
         default:
             return todos;
     }
